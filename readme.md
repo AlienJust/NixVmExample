@@ -13,6 +13,10 @@ or
 
 ``result/bin/run-nixos-vm``
 
+or oneliner:
+
+``QEMU_NET_OPTS="hostfwd=tcp::2221-:22" result/bin/run-nixos-vm``
+
 
 ## SSH into VM
 ``ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no admin@localhost -p 2221``
