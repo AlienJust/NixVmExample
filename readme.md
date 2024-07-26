@@ -1,17 +1,18 @@
-### Simple VM
+# Simple VM
 
 ## Build
-nixos-rebuild build-vm --flake .#test
+``nixos-rebuild build-vm --flake .#test``
 
 or
 
-nix build .#nixosConfigurations.test.config.system.build.vm
+``nix build .#nixosConfigurations.test.config.system.build.vm``
 
 
 ## Run
-export QEMU_NET_OPTS="hostfwd=tcp::2221-:22"
-result/bin/run-nixos-vm
+``export QEMU_NET_OPTS="hostfwd=tcp::2221-:22"``
+
+``result/bin/run-nixos-vm``
 
 
 ## SSH into VM
-ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no admin@localhost -p 2221
+``ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no admin@localhost -p 2221``
